@@ -61,7 +61,7 @@ class Multporn : ParsedHttpSource() {
             }
         }
 
-        return POST("$baseUrl/views/ajax", headers, body.build())
+        return GET("$baseUrl/best", headers, body.build())
     }
 
     override fun popularMangaRequest(page: Int) = buildPopularMangaRequest(page - 1)
